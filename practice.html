@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const user ={name : 'Nguyen Van A' ,emal: 'hoangphu@'}
+        // const student ={id:123, score:10}
+        // const funA =({name}, {id,score}) =>{
+        //     return `${id} ma so  co email la ${emal}`
+        // }
+        // funB =(a,b) =>{
+        //     return `${a.name} ma so  co diem la ${b.score}`
+        // }
+        // console.log(funB(user,student));
+
+        //
+        // const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        // arr.forEach((a) =>{
+        //     console.log(a)
+        // })
+        // //
+        // const b =arr.map((item) =>{
+        //     console.log(item * 2)
+        // })
+        // //
+        // const c = arr.filter((item1) =>{
+        //     return item1 % 2 !== 0 
+        // })
+        // //
+        // const d= arr.find((item2) =>{
+        //     return item2 === 3
+        // })
+        // //  
+        // const userA = {
+        //     ...user,
+        //     name :'Phung Van B',
+        //     email : 'hoangphu@'
+        // }
+        // console.log(userA)
+        //
+
+        const uses = [
+            {name : 'nguyen A', email:'leA@gmail',age: 30},
+            {name : 'nguyen B', email:'leB@gmail',age: 25},
+            {name : 'nguyen C', email:'leC@gmail',age: 20}
+        ]
+        
+        const usersA = uses.filter((item) =>{
+            return item.age > 25
+        })
+        // console.log(usersA)
+        //
+        const usersB = uses.find((item) =>{
+            return item.name === 'nguyen C' & item.age === 20;
+        })
+        // console.log(usersB)
+        const changeAge = uses.map((item) =>{
+            if(item.age < 25){
+                 item.age = 30;
+            }
+            return item;
+        })
+        // console.log(changeAge)
+        // update changAge
+        const changeAge1 = uses.map((item) =>{
+            return {
+                ...item,
+                age: item.age <= 25? 30 :item.age
+            }
+        })
+        // console.log(changeAge1)
+        // update changeAge2
+        const changeAge2 = uses.map((item) =>{
+            if(item.age < 25){
+                return{
+                ...item,
+                 age : 30
+            }
+        }
+        return item
+        })
+
+        //
+        const updateEmail = uses.map((item) => {
+            return{
+                ...item,
+                email : `${item.name}${item.age}@gmail.com`
+            }
+        })
+        console.log(updateEmail)
+
+
+
+
+
+    </script>
+</body> 
+</html>

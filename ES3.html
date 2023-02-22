@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const student ={
+        //     name:"phu",
+        //     email:"phu@gmnail",
+        //     score:0
+        // }
+        // const Chamdiem = ({name,score}) => {
+        //     return `diem cua hoc sinh ${name} la ${score}`;
+        // }
+        // console.log(Chamdiem({
+        //     ...student,
+        //     score : 8
+        // }));
+        ////
+
+        const student1 = []
+        const addStudent =({name, email}) =>{
+            return{
+                name : `${name}`,
+                email : `${email}`
+            }
+        }
+       const a = addStudent({
+            name :'phu',
+            email : 'phu@gmail.com',
+        })
+        student1.push(a)   
+        console.log(student1)
+        ////
+        const students ={
+            studentid :'123',
+            score :10
+        }
+        // cach 1:
+        const funF=(newUser ,newStudent) =>{
+            return `hoc sinh co ma ${studentid} co diem so la ${score}`;
+        }
+        // cach 2
+        // const funF1=({studentid,score})
+    </script>
+</body>
+</html>

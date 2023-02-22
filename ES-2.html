@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    const n1 = [1, 2, 3, 4, 5, 6];
+    // for(let x of n1.values()) {
+    //     console.log(x+1);
+    // }
+    // //
+    // n1.forEach(a => console.log(a+1))
+    // //
+    // const a=10;
+    // if(a%2 === 0){
+    //     console.log("a la so chan")
+    // }
+    // else{
+    //     console.log("a la so le")
+    // }
+    // //
+
+    // Factory Pattern
+    // const funA = (status) =>{
+    //     switch(status){
+    //         case 'active' :
+    //             return 1;
+    //         case 'draft' :
+    //             return 2;
+    //         case 'unactive' :
+    //             return 3;
+    //         default :return 0;
+    //     }
+    // }
+    // console.log(funA('acte'))
+    const b =[1, 2, 3, 4 ,5 ,6 ,7 ,8 ,9 , 10]
+    // const c =[...b]
+    
+    // const funB=(a, ...params) =>{
+    //     let data =[]
+    //     for(let i =0;i<params.length;i++){
+    //         data[i]=params[i] * 2
+    //     }
+    //     return [a, ...data]
+    // }
+    
+
+    // const funC=(a, ...params) => {
+    //     const data1 = params.map((item) => {
+    //         console.log(item)
+    //         return item *2;
+    //     })
+        
+    //     return [a, ...data1]
+    // }
+
+    // console.log(funC(1,2,3,4,5,6,7,8,9,10))
+    // const funA = b.filter((item) {
+    //     return item % 2 === 0
+    // )}
+    const user ={
+        name:'phu',
+        email: "phu@",
+        phone :"012345",
+        age: 12
+     }
+    // const {name, ...params} = user
+    // console.log(params)
+    // const NewName ='mai'
+    // const a = {
+    //     ...user,
+    //     name:NewName
+    // }
+    // console.log(a);
+    const funE = ({email, phone}) =>{
+        return `${email} + ${phone}`;
+    }
+    console.log(funE({
+        ...user,
+        phone:'456789',
+        email:'mai@',
+    }));
+</script>
+</body>
+</html>
